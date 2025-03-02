@@ -1,13 +1,9 @@
 package routes
 
 import (
-  "context"
-  "encoding/json"
-  "net/http"
-  "services/core"
-  "services/logs"
-  "services/models"
-  "time"
+	"context"
+	"net/http"
 )
-func FileLoadContent(ctx context.Context, w http.ResponseWriter, r *http.Request){  
+
+func FileLoadContent(ctx context.Context, w http.ResponseWriter, r *http.Request) {
 }
