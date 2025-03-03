@@ -18,6 +18,7 @@ func main() {
 	core.InitConnection()
 	mux := http.NewServeMux()
 	mux.HandleFunc("POST /add", routes.AddUser)
+	mux.HandleFunc("POST /session", routes.UserSession)
 	log.Println("Serveur démarré sur le port 8080")
 	log.Fatal(http.ListenAndServe(":8080", mux))
 }
