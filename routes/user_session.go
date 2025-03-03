@@ -13,7 +13,7 @@ import (
 )
 
 
-var jwtKey = []byte("clé_secrète_à_modifier")
+var jwtKey = []byte()
 
 // Claims représente les données à inclure dans le JWT
 type Claims struct {
@@ -79,9 +79,12 @@ func UserSession(w http.ResponseWriter, r *http.Request) {
 	response := struct {
 		Token   string `json:"token"`
 		Message string `json:"message"`
+		Statut 	string `json: "statut"`
 	}{
 		Token:   tokenString,
 		Message: "Connexion réussie",
+		Statut:  http.StatusOK 
+
 	}
 
 	// Envoyer la réponse
